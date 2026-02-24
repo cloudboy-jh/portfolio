@@ -1,385 +1,477 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jack Horton</title>
-<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root {
-  --bg-primary: #0c0c0c;
-  --bg-surface: #111111;
-  --bg-elevated: #161616;
-  --border: #222222;
-  --border-subtle: #1a1a1a;
-  --text-primary: #e0e0e0;
-  --text-secondary: #888888;
-  --text-tertiary: #555555;
-  --text-ghost: #333333;
-  --color-success: #34d399;
-  --color-warning: #fbbf24;
-  --color-error: #f87171;
-  --color-info: #60a5fa;
-  --font-display: 'Familjen Grotesk', sans-serif;
-  --font-heading: 'Manrope', sans-serif;
-  --font-body: 'DM Sans', sans-serif;
-  --font-mono: 'IBM Plex Mono', monospace;
-}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jack Horton</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg-primary: #0c0c0c;
+        --bg-surface: #111111;
+        --bg-elevated: #161616;
+        --border: #222222;
+        --border-subtle: #1a1a1a;
+        --text-primary: #e0e0e0;
+        --text-secondary: #888888;
+        --text-tertiary: #555555;
+        --text-ghost: #333333;
+        --color-success: #34d399;
+        --color-warning: #fbbf24;
+        --color-error: #f87171;
+        --color-info: #60a5fa;
+        --font-display: "Familjen Grotesk", sans-serif;
+        --font-heading: "Manrope", sans-serif;
+        --font-body: "DM Sans", sans-serif;
+        --font-mono: "IBM Plex Mono", monospace;
+      }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-body {
-  font-family: var(--font-body);
-  font-size: 14px;
-  line-height: 1.6;
-  background: var(--bg-primary);
-  color: var(--text-primary);
-  -webkit-font-smoothing: antialiased;
-}
+      body {
+        font-family: var(--font-body);
+        font-size: 14px;
+        line-height: 1.6;
+        background: var(--bg-primary);
+        color: var(--text-primary);
+        -webkit-font-smoothing: antialiased;
+      }
 
-.container {
-  max-width: 640px;
-  margin: 0 auto;
-  padding: 64px 24px 96px;
-}
+      .container {
+        max-width: 640px;
+        margin: 0 auto;
+        padding: 64px 24px 96px;
+      }
 
-/* ── Header ── */
-.header {
-  margin-bottom: 48px;
-}
+      /* ── Header ── */
+      .header {
+        margin-bottom: 48px;
+      }
 
-.header-name {
-  font-family: var(--font-display);
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 8px;
-}
+      .header-name {
+        font-family: var(--font-display);
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 8px;
+      }
 
-.header-role {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: var(--text-tertiary);
-  margin-bottom: 16px;
-}
+      .header-role {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: var(--text-tertiary);
+        margin-bottom: 16px;
+      }
 
-.header-bio {
-  color: var(--text-secondary);
-  font-size: 14px;
-  line-height: 1.7;
-  max-width: 520px;
-}
+      .header-bio {
+        color: var(--text-secondary);
+        font-size: 14px;
+        line-height: 1.7;
+        max-width: 520px;
+      }
 
-/* ── Section ── */
-.section {
-  margin-bottom: 48px;
-}
+      /* ── Section ── */
+      .section {
+        margin-bottom: 48px;
+      }
 
-.section-label {
-  font-family: var(--font-mono);
-  font-size: 9px;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: var(--text-tertiary);
-  margin-bottom: 16px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--border);
-}
+      .section-label {
+        font-family: var(--font-mono);
+        font-size: 9px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: var(--text-tertiary);
+        margin-bottom: 16px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--border);
+      }
 
-/* ── Project List ── */
-.project {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  padding: 16px 0;
-  border-bottom: 1px solid var(--border-subtle);
-  text-decoration: none;
-  color: inherit;
-  transition: all 100ms ease;
-}
+      /* ── Project List ── */
+      .project {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 16px 0;
+        border-bottom: 1px solid var(--border-subtle);
+        text-decoration: none;
+        color: inherit;
+        transition: all 100ms ease;
+      }
 
-a.project:hover {
-  background: var(--bg-surface);
-  margin: 0 -12px;
-  padding: 16px 12px;
-  border-color: transparent;
-}
+      a.project:hover {
+        background: var(--bg-surface);
+        margin: 0 -12px;
+        padding: 16px 12px;
+        border-color: transparent;
+      }
 
-a.project:hover + .project {
-  border-top-color: transparent;
-}
+      a.project:hover + .project {
+        border-top-color: transparent;
+      }
 
-.project-mark {
-  width: 36px;
-  height: 36px;
-  background: var(--text-primary);
-  color: var(--bg-primary);
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
+      .project-mark {
+        width: 36px;
+        height: 36px;
+        background: var(--text-primary);
+        color: var(--bg-primary);
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
 
-.project-content {
-  flex: 1;
-  min-width: 0;
-}
+      .project-content {
+        flex: 1;
+        min-width: 0;
+      }
 
-.project-top {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-  margin-bottom: 4px;
-}
+      .project-top {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        margin-bottom: 4px;
+      }
 
-.project-name {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 15px;
-  color: var(--text-primary);
-}
+      .project-name {
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 15px;
+        color: var(--text-primary);
+      }
 
-.project-tag {
-  font-family: var(--font-mono);
-  font-size: 9px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--text-tertiary);
-  white-space: nowrap;
-}
+      .project-tag {
+        font-family: var(--font-mono);
+        font-size: 9px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--text-tertiary);
+        white-space: nowrap;
+      }
 
-.project-desc {
-  color: var(--text-secondary);
-  font-size: 13px;
-  line-height: 1.5;
-}
+      .project-desc {
+        color: var(--text-secondary);
+        font-size: 13px;
+        line-height: 1.5;
+      }
 
-.project-tech {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  color: var(--text-tertiary);
-  margin-top: 6px;
-  letter-spacing: 0.3px;
-}
+      .project-tech {
+        font-family: var(--font-mono);
+        font-size: 10px;
+        color: var(--text-tertiary);
+        margin-top: 6px;
+        letter-spacing: 0.3px;
+      }
 
-/* ── Status dot ── */
-.status {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
+      /* ── Status dot ── */
+      .status {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
 
-.dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  display: inline-block;
-}
+      .dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        display: inline-block;
+      }
 
-.dot-active { background: var(--color-success); }
-.dot-building { background: var(--color-warning); }
-.dot-shipped { background: var(--text-tertiary); }
+      .dot-active {
+        background: var(--color-success);
+      }
+      .dot-building {
+        background: var(--color-warning);
+      }
+      .dot-shipped {
+        background: var(--text-tertiary);
+      }
 
-/* ── Social Links ── */
-.link-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 0;
-  border-bottom: 1px solid var(--border-subtle);
-  text-decoration: none;
-  color: var(--text-secondary);
-  transition: color 100ms ease;
-}
+      /* ── Social Links ── */
+      .link-row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--border-subtle);
+        text-decoration: none;
+        color: var(--text-secondary);
+        transition: color 100ms ease;
+      }
 
-.link-row:hover {
-  color: var(--text-primary);
-}
+      .link-row:hover {
+        color: var(--text-primary);
+      }
 
-.link-label {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  min-width: 100px;
-  color: var(--text-tertiary);
-  transition: color 100ms ease;
-}
+      .link-label {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        min-width: 100px;
+        color: var(--text-tertiary);
+        transition: color 100ms ease;
+      }
 
-.link-row:hover .link-label {
-  color: var(--text-secondary);
-}
+      .link-row:hover .link-label {
+        color: var(--text-secondary);
+      }
 
-.link-value {
-  font-family: var(--font-body);
-  font-size: 14px;
-}
+      .link-value {
+        font-family: var(--font-body);
+        font-size: 14px;
+      }
 
-.link-arrow {
-  margin-left: auto;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--text-ghost);
-  transition: color 100ms ease;
-}
+      .link-arrow {
+        margin-left: auto;
+        font-family: var(--font-mono);
+        font-size: 11px;
+        color: var(--text-ghost);
+        transition: color 100ms ease;
+      }
 
-.link-row:hover .link-arrow {
-  color: var(--text-tertiary);
-}
+      .link-row:hover .link-arrow {
+        color: var(--text-tertiary);
+      }
 
-/* ── Footer ── */
-.footer {
-  margin-top: 64px;
-  padding-top: 16px;
-  border-top: 1px solid var(--border);
-  font-family: var(--font-mono);
-  font-size: 10px;
-  color: var(--text-ghost);
-  letter-spacing: 0.5px;
-}
+      /* ── Footer ── */
+      .footer {
+        margin-top: 64px;
+        padding-top: 16px;
+        border-top: 1px solid var(--border);
+        font-family: var(--font-mono);
+        font-size: 10px;
+        color: var(--text-ghost);
+        letter-spacing: 0.5px;
+      }
 
-/* ── Location badge ── */
-.location {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  color: var(--text-tertiary);
-  letter-spacing: 0.5px;
-  margin-top: 12px;
-}
-</style>
-</head>
-<body>
-<div class="container">
-
-  <!-- Header -->
-  <div class="header">
-    <div class="header-name">Jack Horton</div>
-    <div class="header-role">Product Engineer · Developer Tools</div>
-    <p class="header-bio">
-      Building terminal-native developer tools and data infrastructure at Zyris.
-      Self-taught engineer. Shipping software that works like it came in a box at CompUSA in 1994.
-    </p>
-    <div class="location">Santa Monica, CA</div>
-  </div>
-
-  <!-- Projects -->
-  <div class="section">
-    <div class="section-label">Projects</div>
-
-    <a class="project" href="https://github.com/jackhorton" target="_blank" rel="noopener">
-      <div class="project-mark">P</div>
-      <div class="project-content">
-        <div class="project-top">
-          <span class="project-name">Porter</span>
-          <span class="project-tag"><span class="status"><span class="dot dot-building"></span> Building</span></span>
-        </div>
-        <div class="project-desc">GitHub-native AI agent orchestrator. Universal issue-to-code automation that isn't locked to Copilot.</div>
-        <div class="project-tech">Go · GitHub API · Multi-agent</div>
+      /* ── Location badge ── */
+      .location {
+        font-family: var(--font-mono);
+        font-size: 10px;
+        color: var(--text-tertiary);
+        letter-spacing: 0.5px;
+        margin-top: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <div class="header-name">Jack Horton</div>
+        <div class="header-role">Product Engineer · Developer Tools</div>
+        <p class="header-bio">
+          Building terminal-native developer tools and data infrastructure at
+          Zyris. Self-taught engineer. Shipping software that works like it came
+          in a box at CompUSA in 1994.
+        </p>
+        <div class="location">Santa Monica, CA</div>
       </div>
-    </a>
 
-    <a class="project" href="https://github.com/jackhorton" target="_blank" rel="noopener">
-      <div class="project-mark">B</div>
-      <div class="project-content">
-        <div class="project-top">
-          <span class="project-name">BentoTUI</span>
-          <span class="project-tag"><span class="status"><span class="dot dot-building"></span> Building</span></span>
-        </div>
-        <div class="project-desc">Go TUI application framework built on Bubble Tea. Fills the gap between Charm primitives and shipped apps.</div>
-        <div class="project-tech">Go · Bubble Tea · TUI Framework</div>
+      <!-- Projects -->
+      <div class="section">
+        <div class="section-label">Projects</div>
+
+        <a
+          class="project"
+          href="https://github.com/cloudboy-jh"
+          target="_blank"
+          rel="noopener"
+        >
+          <div class="project-mark">P</div>
+          <div class="project-content">
+            <div class="project-top">
+              <span class="project-name">Porter</span>
+              <span class="project-tag"
+                ><span class="status"
+                  ><span class="dot dot-building"></span> Building</span
+                ></span
+              >
+            </div>
+            <div class="project-desc">
+              GitHub-native AI agent orchestrator. Universal issue-to-code
+              automation that isn't locked to Copilot.
+            </div>
+            <div class="project-tech">Go · GitHub API · Multi-agent</div>
+          </div>
+        </a>
+
+        <a
+          class="project"
+          href="https://github.com/cloudboy-jh"
+          target="_blank"
+          rel="noopener"
+        >
+          <div class="project-mark">B</div>
+          <div class="project-content">
+            <div class="project-top">
+              <span class="project-name">BentoTUI</span>
+              <span class="project-tag"
+                ><span class="status"
+                  ><span class="dot dot-building"></span> Building</span
+                ></span
+              >
+            </div>
+            <div class="project-desc">
+              Go TUI application framework built on Bubble Tea. Fills the gap
+              between Charm primitives and shipped apps.
+            </div>
+            <div class="project-tech">Go · Bubble Tea · TUI Framework</div>
+          </div>
+        </a>
+
+        <a
+          class="project"
+          href="https://github.com/cloudboy-jh"
+          target="_blank"
+          rel="noopener"
+        >
+          <div class="project-mark">V</div>
+          <div class="project-content">
+            <div class="project-top">
+              <span class="project-name">Veil</span>
+              <span class="project-tag"
+                ><span class="status"
+                  ><span class="dot dot-building"></span> Building</span
+                ></span
+              >
+            </div>
+            <div class="project-desc">
+              TUI-based encrypted secrets manager. The first app built on
+              BentoTUI.
+            </div>
+            <div class="project-tech">Go · BentoTUI · Encryption</div>
+          </div>
+        </a>
+
+        <a
+          class="project"
+          href="https://github.com/cloudboy-jh"
+          target="_blank"
+          rel="noopener"
+        >
+          <div class="project-mark">C</div>
+          <div class="project-content">
+            <div class="project-top">
+              <span class="project-name">Churn</span>
+              <span class="project-tag"
+                ><span class="status"
+                  ><span class="dot dot-active"></span> Active</span
+                ></span
+              >
+            </div>
+            <div class="project-desc">
+              Terminal-native code analysis with differential analysis and agent
+              handoff for Claude Code and Cursor.
+            </div>
+            <div class="project-tech">Go · AST · 70-90% token reduction</div>
+          </div>
+        </a>
+
+        <a
+          class="project"
+          href="https://github.com/cloudboy-jh"
+          target="_blank"
+          rel="noopener"
+        >
+          <div class="project-mark">P</div>
+          <div class="project-content">
+            <div class="project-top">
+              <span class="project-name">Pact</span>
+              <span class="project-tag"
+                ><span class="status"
+                  ><span class="dot dot-shipped"></span> Shipped</span
+                ></span
+              >
+            </div>
+            <div class="project-desc">
+              Cross-platform development environment manager. Configure once,
+              run anywhere.
+            </div>
+            <div class="project-tech">Go · Cross-platform · CLI</div>
+          </div>
+        </a>
+
+        <a class="project" href="#" target="_blank" rel="noopener">
+          <div class="project-mark">L</div>
+          <div class="project-content">
+            <div class="project-top">
+              <span class="project-name">LeadDesk 5</span>
+              <span class="project-tag"
+                ><span class="status"
+                  ><span class="dot dot-active"></span> Active</span
+                ></span
+              >
+            </div>
+            <div class="project-desc">
+              Dental practice data enrichment platform. Practice-level tracking
+              with automated enrichment workflows.
+            </div>
+            <div class="project-tech">Next.js · Supabase · n8n</div>
+          </div>
+        </a>
       </div>
-    </a>
 
-    <a class="project" href="https://github.com/jackhorton" target="_blank" rel="noopener">
-      <div class="project-mark">V</div>
-      <div class="project-content">
-        <div class="project-top">
-          <span class="project-name">Veil</span>
-          <span class="project-tag"><span class="status"><span class="dot dot-building"></span> Building</span></span>
-        </div>
-        <div class="project-desc">TUI-based encrypted secrets manager. The first app built on BentoTUI.</div>
-        <div class="project-tech">Go · BentoTUI · Encryption</div>
+      <!-- Links -->
+      <div class="section">
+        <div class="section-label">Links</div>
+
+        <a
+          class="link-row"
+          href="https://github.com/cloudboy-jh"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="link-label">GitHub</span>
+          <span class="link-value">jackhorton</span>
+          <span class="link-arrow">→</span>
+        </a>
+
+        <a
+          class="link-row"
+          href="https://x.com/"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="link-label">X / Twitter</span>
+          <span class="link-value">@jackhortonlol</span>
+          <span class="link-arrow">→</span>
+        </a>
+
+        <a
+          class="link-row"
+          href="https://www.linkedin.com/in/jack-s-horton/"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="link-label">LinkedIn</span>
+          <span class="link-value">Jack Horton</span>
+          <span class="link-arrow">→</span>
+        </a>
+
+        <a class="link-row" href="mailto:jackhortonpersonalbusiness@gmail.com">
+          <span class="link-label">Email</span>
+          <span class="link-value">jackhortonpersonalbusiness@gmail.com</span>
+          <span class="link-arrow">→</span>
+        </a>
       </div>
-    </a>
 
-    <a class="project" href="https://github.com/jackhorton" target="_blank" rel="noopener">
-      <div class="project-mark">C</div>
-      <div class="project-content">
-        <div class="project-top">
-          <span class="project-name">Churn</span>
-          <span class="project-tag"><span class="status"><span class="dot dot-active"></span> Active</span></span>
-        </div>
-        <div class="project-desc">Terminal-native code analysis with differential analysis and agent handoff for Claude Code and Cursor.</div>
-        <div class="project-tech">Go · AST · 70-90% token reduction</div>
+      <div class="footer">
+        © 2026 Jack Horton · Built with sharp corners and no gradients
       </div>
-    </a>
-
-    <a class="project" href="https://github.com/jackhorton" target="_blank" rel="noopener">
-      <div class="project-mark">P</div>
-      <div class="project-content">
-        <div class="project-top">
-          <span class="project-name">Pact</span>
-          <span class="project-tag"><span class="status"><span class="dot dot-shipped"></span> Shipped</span></span>
-        </div>
-        <div class="project-desc">Cross-platform development environment manager. Configure once, run anywhere.</div>
-        <div class="project-tech">Go · Cross-platform · CLI</div>
-      </div>
-    </a>
-
-    <a class="project" href="#" target="_blank" rel="noopener">
-      <div class="project-mark">L</div>
-      <div class="project-content">
-        <div class="project-top">
-          <span class="project-name">LeadDesk 5</span>
-          <span class="project-tag"><span class="status"><span class="dot dot-active"></span> Active</span></span>
-        </div>
-        <div class="project-desc">Dental practice data enrichment platform. Practice-level tracking with automated enrichment workflows.</div>
-        <div class="project-tech">Next.js · Supabase · n8n</div>
-      </div>
-    </a>
-
-  </div>
-
-  <!-- Links -->
-  <div class="section">
-    <div class="section-label">Links</div>
-
-    <a class="link-row" href="https://github.com/cloudboy-jh" target="_blank" rel="noopener">
-      <span class="link-label">GitHub</span>
-      <span class="link-value">jackhorton</span>
-      <span class="link-arrow">→</span>
-    </a>
-
-    <a class="link-row" href="https://x.com/" target="_blank" rel="noopener">
-      <span class="link-label">X / Twitter</span>
-      <span class="link-value">@jackhortonlol</span>
-      <span class="link-arrow">→</span>
-    </a>
-
-    <a class="link-row" href="https://www.linkedin.com/in/jack-s-horton/" target="_blank" rel="noopener">
-      <span class="link-label">LinkedIn</span>
-      <span class="link-value">Jack Horton</span>
-      <span class="link-arrow">→</span>
-    </a>
-
-    <a class="link-row" href="mailto:jack@example.com">
-      <span class="link-label">Email</span>
-      <span class="link-value">jackhortonpersonalbusiness@gmail.com</span>
-      <span class="link-arrow">→</span>
-    </a>
-
-  </div>
-
-  <div class="footer">
-    © 2026 Jack Horton · Built with sharp corners and no gradients
-  </div>
-
-</div>
-</body>
+    </div>
+  </body>
 </html>
