@@ -1,0 +1,105 @@
+/*
+ * Portfolio themes ported from glib-code's in-house pair:
+ *   minimal-dark  — pure grayscale charcoal
+ *   minimal-paper — warm low-chroma paper (the "light" half)
+ *
+ * glib stores tokens as bare `H S% L%` triples consumed via hsl(var(--token)).
+ * We keep that convention: --* tokens hold bare HSL, and the portfolio's
+ * semantic vars (--bg-primary, --text-primary, …) resolve from them.
+ * Toggle flips :root[data-theme] between "minimal-dark" and "minimal-paper".
+ */
+
+:root,
+:root[data-theme="minimal-dark"] {
+  /* glib minimal-dark tokens (grayscale, S=0) */
+  --background: 0 0% 9%;
+  --foreground: 0 0% 95%;
+  --card: 0 0% 12%;
+  --card-foreground: 0 0% 95%;
+  --border-tok: 0 0% 25%;
+  --input: 0 0% 25%;
+  --ring: 0 0% 70%;
+  --primary: 0 0% 70%;
+  --primary-foreground: 0 0% 9%;
+  --muted: 0 0% 15%;
+  --muted-foreground: 0 0% 65%;
+
+  /* portfolio semantic vars derived from the palette */
+  --bg-primary: hsl(var(--background));
+  --bg-surface: hsl(var(--card));
+  --bg-elevated: hsl(var(--muted));
+  --border: hsl(var(--border-tok));
+  --border-subtle: hsl(var(--background) / 0.6);
+  --text-primary: hsl(var(--foreground));
+  --text-secondary: hsl(var(--muted-foreground));
+  --text-tertiary: hsl(var(--foreground) / 0.42);
+  --text-ghost: hsl(var(--foreground) / 0.22);
+
+  /* status colors — vivid on dark */
+  --color-success: #34d399;
+  --color-warning: #fbbf24;
+  --color-error: #f87171;
+  --color-info: #60a5fa;
+}
+
+:root[data-theme="minimal-paper"] {
+  /* glib minimal-paper tokens (warm paper, ink) */
+  --background: 51 33% 92%;
+  --foreground: 0 3% 6%;
+  --card: 48 100% 97%;
+  --card-foreground: 0 3% 6%;
+  --border-tok: 55 10% 79%;
+  --input: 55 10% 79%;
+  --ring: 0 3% 6%;
+  --primary: 0 3% 6%;
+  --primary-foreground: 48 100% 97%;
+  --muted: 51 21% 88%;
+  --muted-foreground: 45 2% 33%;
+
+  --bg-primary: hsl(var(--background));
+  --bg-surface: hsl(var(--card));
+  --bg-elevated: hsl(var(--muted));
+  --border: hsl(var(--border-tok));
+  --border-subtle: hsl(var(--muted-foreground) / 0.18);
+  --text-primary: hsl(var(--foreground));
+  --text-secondary: hsl(var(--muted-foreground));
+  --text-tertiary: hsl(var(--muted-foreground) / 0.7);
+  --text-ghost: hsl(var(--muted-foreground) / 0.4);
+
+  /* status colors — Flexoki-toned so they don't glare on cream */
+  --color-success: hsl(73 84% 27%); /* olive #66800B */
+  --color-warning: hsl(40 71% 37%); /* ochre */
+  --color-error: hsl(3 62% 42%); /* brick #AF3029 */
+  --color-info: hsl(207 47% 42%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-display: "Familjen Grotesk", sans-serif;
+  --font-heading: "Manrope", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.6;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  transition:
+    background 150ms ease,
+    color 150ms ease;
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 64px 24px 96px;
+}

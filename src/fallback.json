@@ -1,0 +1,199 @@
+{
+  "updatedAt": "2026-07-06T00:00:00.000Z",
+  "groups": [
+    {
+      "id": "flagship",
+      "label": "Flagship",
+      "icon": "star",
+      "projects": [
+        {
+          "name": "glib-code",
+          "description": "A workspace where agents code in a sandbox. Your real code stays untouched until you approve.",
+          "url": "https://github.com/cloudboy-jh/glib-code",
+          "homepage": null,
+          "language": "TypeScript",
+          "stars": 0,
+          "pushedAt": null,
+          "mark": "G",
+          "status": "active",
+          "tech": "TypeScript · Agent sandbox · Cloudflare"
+        },
+        {
+          "name": "gittrix",
+          "description": "",
+          "url": "https://github.com/cloudboy-jh/gittrix",
+          "homepage": null,
+          "language": "TypeScript",
+          "stars": 0,
+          "pushedAt": null,
+          "mark": "G",
+          "status": "active",
+          "tech": "TypeScript · Session orchestration · npm"
+        },
+        {
+          "name": "churn",
+          "description": "Your agent's favorite context layer. Terminal-native code analysis with agent handoff.",
+          "url": "https://github.com/cloudboy-jh/churn",
+          "homepage": null,
+          "language": "TypeScript",
+          "stars": 0,
+          "pushedAt": null,
+          "mark": "C",
+          "status": "paused",
+          "tech": "TypeScript · AST · Context layer"
+        }
+      ]
+    },
+    {
+      "id": "tools",
+      "label": "Developer Tools",
+      "icon": "wrench",
+      "projects": [
+        {
+          "name": "suitener",
+          "description": "",
+          "url": "https://github.com/cloudboy-jh/suitener",
+          "homepage": null,
+          "language": "TypeScript",
+          "stars": 0,
+          "pushedAt": null,
+          "mark": "S",
+          "status": "active",
+          "tech": "TypeScript · Bun · CLI"
+        },
+        {
+          "name": "shipwrkrs",
+          "description": "Describe a Cloudflare Worker in plain English, generate code, review, and deploy from one app.",
+          "url": "https://github.com/cloudboy-jh/shipwrkrs",
+          "homepage": null,
+          "language": "Vue",
+          "stars": 0,
+          "pushedAt": null,
+          "mark": "S",
+          "status": "shipped",
+          "tech": "Vue · Cloudflare Workers · LLM"
+        },
+        {
+          "name": "annotr",
+          "description": "Fast local code-commenting CLI. AI comments in ~1-2s, local or API models, tree-sitter context.",
+          "url": "https://github.com/cloudboy-jh/annotr",
+          "homepage": null,
+          "language": "Go",
+          "stars": 0,
+          "pushedAt": null,
+          "mark": "A",
+          "status": "shipped",
+          "tech": "Go · Charm · tree-sitter"
+        },
+        {
+          "name": "pact",
+          "description": "Cross-platform development environment manager. Configure once, run anywhere.",
+          "url": "https://github.com/cloudboy-jh/pact",
+          "homepage": null,
+          "language": "Go",
+          "stars": 0,
+          "pushedAt": null,
+          "mark": "P",
+          "status": "shipped",
+          "tech": "Go · Cross-platform · CLI"
+        }
+      ]
+    },
+    {
+      "id": "tui",
+      "label": "TUI & Frameworks",
+      "icon": "terminal",
+      "projects": [
+        {
+          "name": "bentotui",
+          "description": "The app framework for Bubble Tea. Fills the gap between Charm primitives and shipped apps.",
+          "url": "https://github.com/cloudboy-jh/bentotui",
+          "homepage": null,
+          "language": "Go",
+          "stars": 0,
+          "pushedAt": null,
+          "mark": "B",
+          "status": "building",
+          "tech": "Go · Bubble Tea · Framework"
+        },
+        {
+          "name": "glib",
+          "description": "Terminal workspace app on BentoTUI. Auth, pick repo, stage, review diffs, hand off to an agent in one shell.",
+          "url": "https://github.com/cloudboy-jh/glib",
+          "homepage": null,
+          "language": "Go",
+          "stars": 0,
+          "pushedAt": null,
+          "mark": "G",
+          "status": "shipped",
+          "tech": "Go · BentoTUI"
+        }
+      ]
+    },
+    {
+      "id": "apps",
+      "label": "macOS & Small Apps",
+      "icon": "app",
+      "projects": [
+        {
+          "name": "resource-view-macOS",
+          "description": "LocalPulse — tiny macOS menu-bar monitor for CPU, GPU, RAM, and uptime.",
+          "url": "https://github.com/cloudboy-jh/resource-view-macOS",
+          "homepage": null,
+          "language": "Swift",
+          "stars": 0,
+          "pushedAt": null,
+          "mark": "L",
+          "status": "shipped",
+          "tech": "Swift · SwiftUI · macOS"
+        },
+        {
+          "name": "open-notify",
+          "description": "macOS SwiftUI app to edit OpenCode desktop notification text and sounds.",
+          "url": "https://github.com/cloudboy-jh/open-notify",
+          "homepage": null,
+          "language": "Swift",
+          "stars": 0,
+          "pushedAt": null,
+          "mark": "O",
+          "status": "shipped",
+          "tech": "Swift · SwiftUI · macOS"
+        },
+        {
+          "name": "letitrip",
+          "description": "Let it rip — turn your CDs into a personal Spotify powered by a Raspberry Pi.",
+          "url": "https://github.com/cloudboy-jh/letitrip",
+          "homepage": null,
+          "language": "Go",
+          "stars": 0,
+          "pushedAt": null,
+          "mark": "L",
+          "status": "shipped",
+          "tech": "Go · Raspberry Pi"
+        }
+      ]
+    }
+  ],
+  "links": {
+    "github": {
+      "label": "GitHub",
+      "value": "cloudboy-jh",
+      "href": "https://github.com/cloudboy-jh"
+    },
+    "x": {
+      "label": "X / Twitter",
+      "value": "@jackhortonlol",
+      "href": "https://x.com/jackhortonlol"
+    },
+    "linkedin": {
+      "label": "LinkedIn",
+      "value": "Jack Horton",
+      "href": "https://www.linkedin.com/in/jack-s-horton/"
+    },
+    "email": {
+      "label": "Email",
+      "value": "jackhortonpersonalbusiness@gmail.com",
+      "href": "mailto:jackhortonpersonalbusiness@gmail.com"
+    }
+  }
+}

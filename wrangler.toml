@@ -1,3 +1,16 @@
 name = "portfolio-2026"
+main = "worker/index.ts"
 compatibility_date = "2026-02-23"
-pages_build_output_dir = "."
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+
+[[kv_namespaces]]
+binding = "PROJECTS_KV"
+id = "PLACEHOLDER_REPLACE_WITH_REAL_ID"
+
+# GITHUB_TOKEN is a secret — set with: wrangler secret put GITHUB_TOKEN
+# No cron trigger: freshness is driven by read-time stale-while-revalidate.
