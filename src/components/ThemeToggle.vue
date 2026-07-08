@@ -9,14 +9,10 @@ const { theme, toggle } = useTheme();
     class="theme-toggle"
     type="button"
     :title="
-      theme === 'minimal-dark'
-        ? 'Switch to Minimal Paper'
-        : 'Switch to Minimal Dark'
+      theme === 'minimal-dark' ? 'Switch to paper' : 'Switch to dark'
     "
     :aria-label="
-      theme === 'minimal-dark'
-        ? 'Switch to Minimal Paper'
-        : 'Switch to Minimal Dark'
+      theme === 'minimal-dark' ? 'Switch to paper' : 'Switch to dark'
     "
     @click="toggle"
   >

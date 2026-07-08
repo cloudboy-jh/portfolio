@@ -9,20 +9,21 @@
           "repo": "glib-code",
           "mark": "G",
           "status": "active",
-          "descOverride": "A workspace where agents code in a sandbox. Your real code stays untouched until you approve.",
+          "descOverride": "A sandbox where agents write code. Your real code stays untouched until you approve.",
           "tech": "TypeScript · Agent sandbox · Cloudflare"
         },
         {
           "repo": "gittrix",
           "mark": "G",
           "status": "active",
+          "descOverride": "Session orchestration for coding agents.",
           "tech": "TypeScript · Session orchestration · npm"
         },
         {
           "repo": "churn",
           "mark": "C",
           "status": "paused",
-          "descOverride": "Your agent's favorite context layer. Terminal-native code analysis with agent handoff.",
+          "descOverride": "Context layer for coding agents. Terminal-native code analysis with handoff.",
           "tech": "TypeScript · AST · Context layer"
         }
       ]
@@ -36,27 +37,28 @@
           "repo": "suitener",
           "mark": "S",
           "status": "active",
+          "descOverride": "TypeScript scaffolding and tooling for Bun.",
           "tech": "TypeScript · Bun · CLI"
         },
         {
           "repo": "shipwrkrs",
           "mark": "S",
           "status": "shipped",
-          "descOverride": "Describe a Cloudflare Worker in plain English, generate code, review, and deploy from one app.",
+          "descOverride": "Describe a Cloudflare Worker in plain English. Generate, review, and deploy from one app.",
           "tech": "Vue · Cloudflare Workers · LLM"
         },
         {
           "repo": "annotr",
           "mark": "A",
           "status": "shipped",
-          "descOverride": "Fast local code-commenting CLI. AI comments in ~1-2s, local or API models, tree-sitter context.",
+          "descOverride": "Fast local code-commenting CLI. AI comments in 1-2 seconds, local or API models, tree-sitter context.",
           "tech": "Go · Charm · tree-sitter"
         },
         {
           "repo": "pact",
           "mark": "P",
           "status": "shipped",
-          "descOverride": "Cross-platform development environment manager. Configure once, run anywhere.",
+          "descOverride": "Cross-platform dev environment manager. Configure once, run anywhere.",
           "tech": "Go · Cross-platform · CLI"
         }
       ]
@@ -70,14 +72,14 @@
           "repo": "bentotui",
           "mark": "B",
           "status": "building",
-          "descOverride": "The app framework for Bubble Tea. Fills the gap between Charm primitives and shipped apps.",
+          "descOverride": "App framework for Bubble Tea. Bridges Charm primitives and shipped apps.",
           "tech": "Go · Bubble Tea · Framework"
         },
         {
           "repo": "glib",
           "mark": "G",
           "status": "shipped",
-          "descOverride": "Terminal workspace app on BentoTUI. Auth, pick repo, stage, review diffs, hand off to an agent in one shell.",
+          "descOverride": "Terminal workspace on BentoTUI. Auth, pick a repo, stage, review diffs, hand off to an agent.",
           "tech": "Go · BentoTUI"
         }
       ]
@@ -91,21 +93,21 @@
           "repo": "resource-view-macOS",
           "mark": "L",
           "status": "shipped",
-          "descOverride": "LocalPulse — tiny macOS menu-bar monitor for CPU, GPU, RAM, and uptime.",
+          "descOverride": "LocalPulse. Tiny macOS menu-bar monitor for CPU, GPU, RAM, and uptime.",
           "tech": "Swift · SwiftUI · macOS"
         },
         {
           "repo": "open-notify",
           "mark": "O",
           "status": "shipped",
-          "descOverride": "macOS SwiftUI app to edit OpenCode desktop notification text and sounds.",
+          "descOverride": "macOS SwiftUI app for editing OpenCode desktop notification text and sounds.",
           "tech": "Swift · SwiftUI · macOS"
         },
         {
           "repo": "letitrip",
           "mark": "L",
           "status": "shipped",
-          "descOverride": "Let it rip — turn your CDs into a personal Spotify powered by a Raspberry Pi.",
+          "descOverride": "Turn your CDs into a personal Spotify on a Raspberry Pi.",
           "tech": "Go · Raspberry Pi"
         }
       ]

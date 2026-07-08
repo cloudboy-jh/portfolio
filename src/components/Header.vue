@@ -12,8 +12,8 @@ import ThemeToggle from "./ThemeToggle.vue";
       <ThemeToggle />
     </div>
     <p class="header-bio">
-      Building terminal-native developer tools and data infrastructure at Zyris.
-      Self-taught engineer shipping software that just works.
+      Building terminal-native dev tools and data infrastructure at Zyris.
+      Self-taught. Shipping software that just works.
     </p>
     <div class="location">Santa Monica, CA</div>
   </div>
