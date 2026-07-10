@@ -20,10 +20,10 @@
           "tech": "TypeScript · Session orchestration · npm"
         },
         {
-          "repo": "churn",
-          "mark": "C",
-          "status": "paused",
-          "descOverride": "Context layer for coding agents. Terminal-native code analysis with handoff.",
+          "repo": "mimir",
+          "mark": "M",
+          "status": "active",
+          "descOverride": "Headless codebase context and session memory plane utilizing git + Markdown.",
           "tech": "TypeScript · AST · Context layer"
         }
       ]

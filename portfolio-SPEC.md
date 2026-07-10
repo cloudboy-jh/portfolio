@@ -103,8 +103,8 @@ This is the file Jack edits to reorganize the portfolio. Groups render top-to-bo
           "tech": "TypeScript · Agent sandbox · Cloudflare" },
         { "repo": "gittrix", "mark": "G", "status": "active",
           "tech": "TypeScript · Session orchestration · npm" },
-        { "repo": "churn", "mark": "C", "status": "paused",
-          "descOverride": "Your agent's favorite context layer. Terminal-native code analysis with agent handoff.",
+        { "repo": "mimir", "mark": "M", "status": "active",
+          "descOverride": "Headless codebase context and session memory plane utilizing git + Markdown.",
           "tech": "TypeScript · AST · Context layer" }
       ]
     },
@@ -162,7 +162,7 @@ This is the file Jack edits to reorganize the portfolio. Groups render top-to-bo
 }
 ```
 
-> NOTE for Jack to verify before ship: `porter`/`veil` intentionally dropped (stale). Re-add to curation if wanted. `churn`/`pact`/`bentotui` marked as their real state — adjust status strings freely.
+> NOTE for Jack to verify before ship: `porter`/`veil` intentionally dropped (stale). Re-add to curation if wanted. `mimir`/`pact`/`bentotui` marked as their real state — adjust status strings freely.
 
 ---
 

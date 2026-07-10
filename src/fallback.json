@@ -31,15 +31,15 @@
           "tech": "TypeScript · Session orchestration · npm"
         },
         {
-          "name": "churn",
-          "description": "Context layer for coding agents. Terminal-native code analysis with handoff.",
-          "url": "https://github.com/cloudboy-jh/churn",
+          "name": "mimir",
+          "description": "Headless codebase context and session memory plane utilizing git + Markdown.",
+          "url": "https://github.com/cloudboy-jh/mimir",
           "homepage": null,
           "language": "TypeScript",
           "stars": 0,
           "pushedAt": null,
-          "mark": "C",
-          "status": "paused",
+          "mark": "M",
+          "status": "active",
           "tech": "TypeScript · AST · Context layer"
         }
       ]
