@@ -3,6 +3,9 @@ main = "worker/index.ts"
 compatibility_date = "2026-02-23"
 compatibility_flags = ["nodejs_compat"]
 
+[build]
+command = "bun run build"
+
 [assets]
 directory = "./dist"
 binding = "ASSETS"
@@ -10,7 +13,7 @@ not_found_handling = "single-page-application"
 
 [[kv_namespaces]]
 binding = "PROJECTS_KV"
-id = "PLACEHOLDER_REPLACE_WITH_REAL_ID"
+id = "90c1d8863bbd41aeac158c71afa75a6f"
 
 # GITHUB_TOKEN is a secret — set with: wrangler secret put GITHUB_TOKEN
 # No cron trigger: freshness is driven by read-time stale-while-revalidate.
